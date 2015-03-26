@@ -1,0 +1,22 @@
+{
+  "name": "spreadsheet",
+  "version": "0.0.0",
+  "authors": [
+    "Anton Dimkov <dimkov@tesseris.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "requirejs": "~2.1.16",
+    "angular": "~1.3.15",
+    "angular-route": "~1.3.15"
+  }
+}
