@@ -14,6 +14,7 @@ Used modules:
 * passport          - authentication and authorization
 * passport-local    - forms authentication module
 * winston           - logging
+
 ##Client
 AngularJS with asynchronous module definition concept (AMD). All modules will be loaded with requirejs on demand.
 Used modules:
@@ -21,6 +22,7 @@ Used modules:
 * angular-route     - angular routing
 * requirejs         - AMD
 * bootstrap         - CSS 
+
 ###Sample of module definition:
 `/client/controllers/loginController.js`
 ```javascript
