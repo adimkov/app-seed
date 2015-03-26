@@ -10,7 +10,17 @@ head(lang='en')
     link(rel='stylesheet' type='text/css' href='stylesheets/login.css')
     block styles
 body
-    block content
+    nav.navbar.navbar-default
+        div.container-fluid
+            div.navbar-header
+                a.navbar-brand(href='/') SP skeleton
+            div.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                    if user
+                        li
+                            a(href='/signout') Logout
+    div.container-fluid
+        block content
 
 script(type="text/javascript" src="vendor/jquery/dist/jquery.min.js")
 script(type="text/javascript" src="vendor/bootstrap/dist/js/bootstrap.min.js")

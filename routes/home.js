@@ -10,7 +10,7 @@ var path = require('path');
  * Gets index page
  * */
 router.get('/', auth.isAuthenticated, function(req, res) {
-    res.render('home/index.jade', {title: 'app'});
+    res.render('home/index.jade', {title: 'app', user: req.user});
 });
 
 /**

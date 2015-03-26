@@ -8,6 +8,9 @@ define(['./app'], function(app) {
         $routeProvider.when('/', {
             templateUrl: 'views/home.html',
             controller: 'HomeController'
-        });
+        }).otherwise({
+                redirectTo: '/'
+            }
+        );
     }]);
 });
