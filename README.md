@@ -77,8 +77,6 @@ define([
 |   |   |- index.js             : API route loader
 |   |- home.js                  : default routes 
 |   |- index.js                 : routes loader
-|- utils                        : utilises
-|   |- logger.js                : logger
 |- views                        : template files
 |   |- home                     : template files for home route
 |   |   |- index.jade           : default page 
@@ -89,4 +87,5 @@ define([
 |- app.js                       : main application module
 |- authentication.js            : authentication/authorization module
 |- bootstrap.js                 : initialization application module
+|- logger.js                    : logger
 ```

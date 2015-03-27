@@ -3,7 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
-var logger = require('../../utils/logger');
+var logger = require('../../logger');
 
 router.get('/st', function(req, res) {
     logger.info('Get application status. Status: %s', 'OK');

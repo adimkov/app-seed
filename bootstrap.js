@@ -3,7 +3,7 @@
  */
 
 var databaseConfig = require('./config/database');
-var logger = require('./utils/logger');
+var logger = require('./logger');
 var mongoose = require('mongoose');
 var db = require('./models/db');
 
