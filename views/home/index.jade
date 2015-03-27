@@ -1,4 +1,11 @@
 extends ../layout.jade
+
+block navigation
+    li
+        a(href='#/') Home
+    li
+        a(href='#/profile') Profile
+
 block content
     div(data-ng-view)
 
