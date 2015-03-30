@@ -2,16 +2,12 @@
 
 <form ng-submit="saveProfile()">
     <div class="form-group">
-        <label>
-            Username
-            <input type="text" class="form-control" placeholder="Username" ng-model="user.name">
-        </label>
+        <label for="username">Username</label>
+        <input id="username" type="text" class="form-control" placeholder="Username" ng-model="user.name">
     </div>
     <div class="form-group">
-        <label>
-            Email
-            <input type="email" class="form-control" placeholder="Username" ng-model="user.email" readonly>
-        </label>
+        <label for="email">Email</label>
+        <input id="email" type="email" class="form-control" placeholder="Username" ng-model="user.email" readonly>
     </div>
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Save</button>
