@@ -7,22 +7,24 @@ var bcrypt = require('bcrypt-nodejs');
 
 var userSchema = Schema({
     name: String,
-    email: String,
-    password: String
+    local: {
+        email: String,
+        password: String
+    }
 });
 
 userSchema.methods.validPassword = function(pwd) {
-    return bcrypt.compareSync(pwd, this.password);
+    return bcrypt.compareSync(pwd, this.local.password);
 };
 
 userSchema.methods.generateHash = function(pwd) {
-    this.password = bcrypt.hashSync(pwd, this.salt);
+    this.local.password = bcrypt.hashSync(pwd, bcrypt.genSaltSync());
 };
 
 if (!userSchema.options.toObject) userSchema.options.toObject = {};
 userSchema.options.toObject.transform  = function(doc, ret, options) {
     delete ret._id;
-    delete ret.password;
+    delete ret.local.password;
 };
 
 module.exports = mongoose.model('User', userSchema);

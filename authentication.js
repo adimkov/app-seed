@@ -22,7 +22,7 @@ passport.use('local-signin', new LocalStrategy(
         passwordField: 'password'
     },
     function(email, password, done) {
-    db.User.findOne({ email: email }, function(err, user) {
+    db.User.findOne({ 'local.email': email }, function(err, user) {
         if (err) { return done(err); }
         if (!user) {
             return done(null, false, { message: 'Incorrect username.' });
@@ -43,15 +43,15 @@ passport.use('local-signup', new LocalStrategy(
         passwordField: 'password'
     },
     function(email, password, done) {
-    db.User.findOne({ email: email }, function(err, user) {
+    db.User.findOne({ 'local.email': email }, function(err, user) {
         if (err) { return done(err); }
         if (user) {
             return done(null, false, { message: 'That email is already taken.' })
         }
         else {
             var newUser = new db.User();
-            newUser.email = email;
-            newUser.passport = newUser.generateHash(password);
+            newUser.local.email = email;
+            newUser.generateHash(password);
             newUser.save(function(err) {
                 if (err) return done(err);
 
