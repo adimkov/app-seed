@@ -1,7 +1,8 @@
 # sp-seed (single page application skeleton)
-sp-seed is an application skeleton for web apps. It uses AngularJS with Acrimonious Module definition (AMD) for front-end and Node.js for back-end. It is suitable for Single Page Application (SPA)
+sp-seed is an application skeleton for web apps. It uses AngularJS with Asynchronous Module Definition (AMD) for front-end and Node.js for back-end. It is suitable for Single Page Application (SPA)
 ##Initilization:
-for install all required  backend modules and frontend modules 
+for install all required  backend modules and frontend modules
+
 `npm install`
 ##Server
 Nothing special, nodejs application skeleton with integrated logging, authentication and data access modules.
